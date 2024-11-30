@@ -21,6 +21,11 @@ UPDATE sys_param SET description = 'Callback URL for Cellcard server' WHERE tag 
 UPDATE cfg_feature_alert SET description = '<e> not found in configured MNOs msisdn series and marked as Default operator. Corrective action to update new msisdn series to be taken', feature = 'SMS Notification' WHERE alert_id = 'alert1207';
 UPDATE cfg_feature_alert SET feature = 'SMS Notification' WHERE alert_id = 'alert1203';
 
+DELETE FROM sys_param WHERE tag = 'agg_report_last_run_time';
+DELETE FROM sys_param WHERE tag = 'smart_file_path';
+DELETE FROM sys_param WHERE tag = 'smart_username';
+DELETE FROM sys_param WHERE tag = 'smart_password';
+
 
 EOFMYSQL`
 
