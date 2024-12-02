@@ -65,7 +65,6 @@ INSERT IGNORE INTO operator_series(series_start,series_end,series_type,operator_
 INSERT IGNORE INTO operator_series(series_start,series_end,series_type,operator_name,length) values (85512,85512,'msisdn','seatel',10);
 INSERT IGNORE INTO operator_series(series_start,series_end,series_type,operator_name,length) values (85576,85576,'msisdn','cellcard',11);
 
-INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('mediation_ftp_path','smart_file_path','/u01/cdr','SMS Notification','system','system');
 INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Smart Operator TPS Supported','smart_sms_tps','10','SMS Notification','system','system');
 INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('CellCard Operator TPS Supported','cellcard_sms_tps','15','SMS Notification','system','system');
 INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Metfone Operator TPS Supported','metfone_sms_tps','12','SMS Notification','system','system');
@@ -74,8 +73,6 @@ INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modif
 INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Smart SMS Notification sent url','smart_sms_url','https://mife.smart.com.kh:8243/smsmessaging/v1/outbound/tel%3A%2B310/requests','SMS Notification','system','system');
 INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Smart SMS Notification sent url http url','cellcard_sms_url','http://10.100.1.4:15013/cgi-bin/sendsms','SMS Notification','system','system');
 INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Metfone SMS Notification sent url http url','metfone_sms_url','http://10.100.1.134:15013/cgi-bin/sendsms','SMS Notification','system','system');
-INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Smart authentication credentials Username','smart_username','N/A','SMS Notification','system','system');
-INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Smart authentication credentials Password','smart_password','N/A','SMS Notification','system','system');
 INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Cellcard authentication credentials Username','cellcard_username','123','SMS Notification','system','system');
 INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Cellcard authentication credentials Password','cellcard_password','123','SMS Notification','system','system');
 INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Metfone authentication credentials Username','metfone_username','123','SMS Notification','system','system');
@@ -91,15 +88,15 @@ INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modif
 INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Token expiry duration in seconds','smart_token_timeout_in_sec','3600','SMS Notification','system','system');
 INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Smart token url to get Auth token url','smart_token_url','https://mife.smart.com.kh:8243/token','SMS Notification','system','system');
 INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Smart consumer key used for Auth Token','smart_consumer_key','e3A07qYUfzv64934dqMHeMZg5yIa','SMS Notification','system','system');
-INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('','smart_consumer_secret','oZ0DWsPp2nbH5Sv159Y9f15fEeoa','SMS Notification','system','system');
-INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('','smart_callback_url','https://lab-smart.eirs.gov.kh/eirs/callback/smart','SMS Notification','system','system');
-INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('','seatel_sms_url','http://10.100.1.134:15013/cgi-bin/sendsms','SMS Notification','system','system');
-INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('','seatel_sms_tps','12','SMS Notification','system','system');
-INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('','seatel_callback_url','http://10.100.1.134:9515/eirs/callback/kanel','SMS Notification','system','system');
-INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('','seatel_smsc_code','SMSC01','SMS Notification','system','system');
-INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('','cellcard_smsc_code','SMSC02','SMS Notification','system','system');
-INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('','metfone_callback_url','http://10.100.1.134:9515/eirs/callback/kanel','SMS Notification','system','system');
-INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('','cellcard_callback_url','http://10.100.1.1344:9515/eirs/callback/kanel','SMS Notification','system','system');
+INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Smart Consumer secret key used for Auth Token','smart_consumer_secret','oZ0DWsPp2nbH5Sv159Y9f15fEeoa','SMS Notification','system','system');
+INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Callback URL for Smart server','smart_callback_url','https://lab-smart.eirs.gov.kh/eirs/callback/smart','SMS Notification','system','system');
+INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('SMS URL for Seatel server','seatel_sms_url','http://10.100.1.134:15013/cgi-bin/sendsms','SMS Notification','system','system');
+INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('SMS TPS for Seatel server','seatel_sms_tps','12','SMS Notification','system','system');
+INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Callback URL for Seatel server','seatel_callback_url','http://10.100.1.134:9515/eirs/callback/kanel','SMS Notification','system','system');
+INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('SMSC code for Seatel server','seatel_smsc_code','SMSC01','SMS Notification','system','system');
+INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('SMSC code for Cellcard server','cellcard_smsc_code','SMSC02','SMS Notification','system','system');
+INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Callback URL for Metfone server','metfone_callback_url','http://10.100.1.134:9515/eirs/callback/kanel','SMS Notification','system','system');
+INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Callback URL for Cellcard server','cellcard_callback_url','http://10.100.1.1344:9515/eirs/callback/kanel','SMS Notification','system','system');
 INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('Number of attempts to send SMS','sms_retry_count','3','SMS Notification','system','system');
 INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('SMS retry time difference','sms_retry_interval','15000','SMS Notification','system','system');
 INSERT IGNORE INTO sys_param (description,tag,value,feature_name,user_type,modified_by) VALUES ('SMS Kannel DLR Mask','kanelDlrMask','31','SMS Notification','system','system');
